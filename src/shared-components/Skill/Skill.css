@@ -1,0 +1,40 @@
+.skill-comp {
+  border: none;
+  border-radius: var(--border-radius);
+  background-color: var(--transparent-bg-color);
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.skill-comp > header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.skill-comp .name {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  margin-right: 10px;
+}
+
+.skill-comp .valuation {
+  font-size: 18px;
+  color: var(--secpndary-dark-color);
+}
+
+.skill-comp .valuation .fill{
+  color: var(--tertiary-color);
+}
+
+.skill-comp .additional-infos {
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.skill-comp .tools {
+  font-size: 14px;
+  font-weight: 400;
+}

@@ -1,0 +1,50 @@
+#home-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#home-page::before {
+  background-image: url(bg/home.jpeg);
+}
+
+#home-page main {
+  text-align: center;
+}
+
+#home-page h1 {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+#home-page h1 strong{
+  font-size: 36px;
+  font-weight: 700;
+}
+
+#home-page p {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+#home-page .btn-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10rem;
+}
+
+#home-page .btn-container button {
+  padding: 10px 20px;
+  background-color: transparent;
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+#home-page .btn-container button.call-to-action {
+  display: flex;
+  background-color: var(--tertiary-color);
+  border-color: var(--tertiary-color);
+  margin-bottom: 20px;
+}

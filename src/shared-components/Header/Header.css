@@ -1,0 +1,51 @@
+.header-comp {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 18px;
+  padding: 20px 0;
+}
+
+.header-comp .logo {
+  font-family: 'Saira Stencil One', cursive;
+  font-size: 36px;
+}
+
+.header-comp .nav-menu ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;;
+}
+
+.header-comp .nav-item {
+  padding: 14px 20px;
+}
+
+.header-comp .cta-btn {
+  padding: 7px 20px;
+  color: var(--primary-color);
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--primary-color);
+  height: max-content;
+}
+
+.header-comp .cta-btn:hover {
+  color: var(--tertiary-color);
+  border-color: var(--tertiary-color);
+}
+
+.header-comp .cta-btn .icon {
+  margin-right: 0.7em;
+}
+
+.header-comp .cta-btn:hover .icon {
+  stroke: var(--tertiary-color);
+}
+
+.header-comp .cta-btn .text {
+  text-transform: uppercase;
+}
