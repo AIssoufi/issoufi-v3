@@ -13,7 +13,7 @@ const Experiences = () => {
   return (
     <section id="experiences-page" className="page">
       <header>
-        <h1>Experiences</h1>
+        <h1 className="title">Expériences</h1>
       </header>
       <main >
         <Experience

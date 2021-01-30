@@ -1,3 +1,6 @@
-#experiences-page {
-
+#experiences-page > header > .title {
+  font-size: 36px;
+  font-weight: 700;
+  margin: 0;
+  margin-bottom: 10px;
 }

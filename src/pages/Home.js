@@ -1,5 +1,6 @@
 // Dependencies
 import React from 'react';
+import { Link } from "react-router-dom";
 
 // Style
 import './Home.css'
@@ -13,8 +14,8 @@ const Home = () => {
         <p>Je vous aide à dévelloper vos applications web</p>
       </main>
       <div className="btn-container">
-        <button type="button" className="call-to-action">Voir mes projets</button>
-        <button type="button">Expériences professionnelles</button>
+        <Link to="/projects" className="btn call-to-action">Voir mes projets</Link>
+        <Link to="/experiences" className="btn">Expériences professionnelles</Link>
       </div>
     </section>
   )

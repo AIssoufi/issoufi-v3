@@ -35,14 +35,21 @@
   margin-top: 10rem;
 }
 
-#home-page .btn-container button {
+#home-page .btn-container .btn {
+  display: block;
+  font-size: 14px;
+  font-weight: 400px;
+  border-radius: 60px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--primary-color);
+  width: max-content;
   padding: 10px 20px;
   background-color: transparent;
-  border-color: var(--primary-color);
   color: var(--primary-color);
 }
 
-#home-page .btn-container button.call-to-action {
+#home-page .btn-container .btn.call-to-action {
   display: flex;
   background-color: var(--tertiary-color);
   border-color: var(--tertiary-color);
