@@ -1,5 +1,5 @@
 // Dependencies
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 // Style
@@ -11,7 +11,10 @@ const Experience = ({
   return (
     <article className="exp-comp">
       <header className="summary">
-        <img className="entity-logo" src={entityLogoUrl} />
+        <img
+          className="entity-logo" src={entityLogoUrl}
+          alt={entityName}
+        />
         <div className="job-summary">
           <h2 className='job-name'>{jobName}</h2>
           <div className='job-details'>{`${entityName} · ${contratType} · ${city}`}</div>
@@ -24,10 +27,10 @@ const Experience = ({
 };
 
 Experience.propTypes = {
-  children: PropTypes.oneOfType(
+  children: PropTypes.oneOfType([
     PropTypes.element,
     PropTypes.arrayOf(PropTypes.element)
-  ),
+  ]),
   jobName: PropTypes.string,
   entityName: PropTypes.string,
   entityLogoUrl: PropTypes.string,
@@ -70,10 +73,10 @@ Project.propTypes = {
   title: PropTypes.string.isRequired,
   state: PropTypes.string,
   technologies: PropTypes.arrayOf(PropTypes.string),
-  children: PropTypes.oneOfType(
+  children: PropTypes.oneOfType([
     PropTypes.element,
     PropTypes.arrayOf(PropTypes.element)
-  )
+  ])
 };
 
 Project.defaultProps = {

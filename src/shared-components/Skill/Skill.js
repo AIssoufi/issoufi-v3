@@ -37,17 +37,17 @@ const Skill = ({
 
 Skill.propTypes = {
   name: PropTypes.string.isRequired,
-  experienceDuration: PropTypes.oneOfType([PropTypes.string, null]),
-  proProjectCount: PropTypes.oneOfType([PropTypes.number, null]),
-  personalProjectCount: PropTypes.oneOfType([PropTypes.number, null]),
+  experienceDuration: PropTypes.string,
+  proProjectCount: PropTypes.number,
+  personalProjectCount: PropTypes.number,
   tools: PropTypes.arrayOf(PropTypes.string),
   valuationValue: PropTypes.string.isRequired
 };
 
 Skill.defaultProps = {
-  experienceDuration: null,
-  proProjectCount: null,
-  personalProjectCount: null,
+  experienceDuration: '',
+  proProjectCount: NaN,
+  personalProjectCount: NaN,
   tools: [],
 };
 

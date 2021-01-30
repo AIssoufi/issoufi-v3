@@ -60,7 +60,7 @@ const Project = ({ title, projects }) => {
         }) => (
           <div key={id} className="project-item">
             <header className="image-container">
-              <img className="" src={imageUrl} />
+              <img className="" src={imageUrl} alt={name} />
               <div className="like-container">
                 <span className="counter">{likeCount}</span>
                 <LikeIcon className={`like ${isLikedByOwnUser ? 'isLiked' : ''}`} />
