@@ -67,6 +67,7 @@
   stroke: var(--tertiary-color);
   color: var(--tertiary-color);
   cursor: pointer;
+  transform: none;
 }
 
 .project-comp .project-item {
