@@ -19,7 +19,7 @@ const Experiences = () => {
         <Experience
           jobName='Développeur full-stack JavaScript'
           entityName='Wibilong'
-          entityLogoUrl='https://wibilong.com/wp-content/uploads/wibilong_512.png'
+          entityLogoUrl='https://firebasestorage.googleapis.com/v0/b/issoufi-v3.appspot.com/o/experiences%2Flogos%2Fwibilong.png?alt=media&token=b2dd8cdf-9da9-4713-8719-f27647aa2f61'
           contratType='CDI'
           city='Paris (75)'
           startDate='sept. 2019'
@@ -40,7 +40,7 @@ const Experiences = () => {
         <Experience
           jobName='Développeur full-stack JavaScript'
           entityName='Supralog'
-          entityLogoUrl='https://media-exp1.licdn.com/dms/image/C4E0BAQGt3Lk_5MHeCA/company-logo_200_200/0/1519873483506?e=2159024400&v=beta&t=zBhFUzZT_fd8zpQuEhz1JyA1e4zB7wA5ewdoWN5lw6s'
+          entityLogoUrl='https://firebasestorage.googleapis.com/v0/b/issoufi-v3.appspot.com/o/experiences%2Flogos%2Fsupralog.png?alt=media&token=d202bebf-a943-4059-b975-6b9ae151c213'
           contratType='Contrat en alternance'
           city='Antibes (06)'
           startDate='juin 2018'
@@ -77,7 +77,7 @@ const Experiences = () => {
         <Experience
           jobName='Développeur front-end JavaScript'
           entityName='Beepeers'
-          entityLogoUrl='https://pbs.twimg.com/profile_images/740108708185792513/AF7cLQm2_400x400.jpg'
+          entityLogoUrl='https://firebasestorage.googleapis.com/v0/b/issoufi-v3.appspot.com/o/experiences%2Flogos%2Fbeepeers.jpg?alt=media&token=14971955-d8f6-4e32-8a6a-c262e75e8974'
           contratType='Stage'
           city='Valbonne (06)'
           startDate='mai 2017'

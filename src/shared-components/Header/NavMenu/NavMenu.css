@@ -23,6 +23,11 @@
 }
 
 .nav-menu-comp .cta-btn {
+  border-radius: 60px;
+  width: max-content;
+  transform: scale(1);
+  transition-property: color, border-color, transform, background-color;
+  transition-duration: var(--transition-duration);
   margin-top: 14px;
   padding: 7px 20px;
   color: var(--primary-color);
@@ -33,6 +38,10 @@
   justify-content: center;
   border: 1px solid var(--primary-color);
   height: max-content;
+}
+
+.nav-menu-comp .cta-btn:hover {
+  transform: scale(1.15);
 }
 
 .nav-menu-comp .cta-btn .icon {

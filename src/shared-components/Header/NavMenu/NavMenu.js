@@ -23,7 +23,12 @@ const NavMenu = ({ items, onClick, mobileMenuIsOpen }) => {
           >{item.name}</NavLink></li>
         ))}
       </ul>
-      <button className="cta-btn" onClick={onClick}><DownloadIcon className="icon"/><span className="text">CV</span></button>
+      <a
+        className="cta-btn"
+        onClick={onClick}
+        href="https://firebasestorage.googleapis.com/v0/b/issoufi-v3.appspot.com/o/CV%20-%20Adam%20Issoufi.pdf?alt=media&token=f8a8ba99-9228-40c4-aaa1-77954c8b815a"
+      ><DownloadIcon className="icon"/><span className="text">CV</span>
+      </a>
     </nav>
   )
 };
