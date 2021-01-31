@@ -1,0 +1,48 @@
+.burger-menu-comp > svg {
+  height: min-content !important;
+  width: min-content !important;
+  position: relative;
+  z-index: 1;
+}
+
+.burger-menu-comp.is-open {
+  position: relative;
+}
+
+.burger-menu-comp.is-open::before {
+  content: '';
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+  height: 600px;
+  width: 600px;
+  background-color: var(--tertiary-color);
+  border-radius: 50%;
+  transform: translate(46%, -46%);
+  animation-duration: var(--transition-duration);
+  animation-name: growth;
+}
+
+@keyframes growth {
+  from {
+    height: 0px;
+    width: 0px;
+  }
+
+  to {
+    height: 600px;
+    width: 600px;
+  }
+}
+
+@media (min-width: 50em) {
+  .burger-menu-comp {
+    display: none;
+  }
+}
+
+@media (min-width: 100em) {
+
+}

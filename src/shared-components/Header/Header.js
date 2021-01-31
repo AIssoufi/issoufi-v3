@@ -1,36 +1,39 @@
 // Dependencies
-import React from 'react';
-import {
-  NavLink, Link
-} from "react-router-dom";
+import React, { useState } from 'react';
+import { Link } from "react-router-dom";
 
 // Styles
 import './Header.css';
 
-// SVG
-import { ReactComponent as DownloadIcon } from './icons/download.svg'
+// Child components
+import NavMenu from './NavMenu';
+import BurgerMenu from './BurgerMenu';
+
+const items = [
+  { name: 'Projets', url: '/projects' },
+  { name: 'Expériences', url: '/experiences' },
+  { name: 'Compétences', url: '/skills' }
+];
 
 const Header = () => {
-
-  const links = [
-    { name: 'Projets', url: '/projects' },
-    { name: 'Expériences', url: '/experiences' },
-    { name: 'Compétences', url: '/skills' }
-  ];
+  const [mobileMenuIsOpen, setMobileMenuIsOpen] = useState(false);
 
   return (
     <header className="header-comp">
       <div className="logo"><Link to="/">AI</Link></div>
-      <nav className="nav-menu">
-        <ul>{links.map(item => (
-            <li
-              key={item.url}
-              className="nav-item"
-            ><NavLink to={item.url}>{item.name}</NavLink></li>
-          ))}
-          <button className="cta-btn"><DownloadIcon className="icon"/><span className="text">CV</span></button>
-        </ul>
-      </nav>
+      <div className={`menu ${mobileMenuIsOpen ? 'is-stiky' : ''}`}>
+        <NavMenu
+          items={items}
+          mobileMenuIsOpen={mobileMenuIsOpen}
+          onClick={() => setMobileMenuIsOpen(false)}
+        />
+        <BurgerMenu
+          isOpen={mobileMenuIsOpen}
+          onOpen={() => setMobileMenuIsOpen(true)}
+          onClose={() => setMobileMenuIsOpen(false)}
+        />
+      </div>
+
     </header>
   )
 }

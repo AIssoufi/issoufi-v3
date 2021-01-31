@@ -13,6 +13,9 @@
   /* Break point */
   --tablet-max-width: 100em;
   --phone-max-width: 50em;
+
+  /* Animation */
+  --transition-duration: 0.3s;
 }
 
 body {
@@ -45,21 +48,31 @@ button {
   border-width: 1px;
   border-style: solid;
   width: max-content;
+  transform: scale(1);
+  transition-property: color, border-color, transform, background-color;
+  transition-duration: var(--transition-duration);
 }
 
 button:hover {
   cursor: pointer;
+  transform: scale(1.15);
 }
 
 a {
   color: var(--primary-color);
   text-decoration: none;
+  transition-property: color;
+  transition-duration: var(--transition-duration);
 }
 
-a:hover {
-  color: var(--tertiary-color);
+@media (min-width: 50em) {
+  a:hover {
+    color: var(--tertiary-color);
+  }
 }
 
 svg {
   stroke: var(--primary-color);
+  transition-property: stroke;
+  transition-duration: var(--transition-duration);
 }

@@ -47,6 +47,18 @@
   padding: 10px 20px;
   background-color: transparent;
   color: var(--primary-color);
+  transform: scale(1);
+  transition-property: transform, background-color, color, border-color;
+  transition-duration: var(--transition-duration);
+}
+
+#home-page .btn-container .btn:hover {
+  transform: scale(1.15);
+}
+
+#home-page .btn-container .btn:not(.call-to-action):hover {
+  background-color: var(--primary-color);
+  color: var(--tertiary-color);
 }
 
 #home-page .btn-container .btn.call-to-action {
