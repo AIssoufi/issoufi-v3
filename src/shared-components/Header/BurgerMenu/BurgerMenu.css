@@ -27,13 +27,11 @@
 
 @keyframes growth {
   from {
-    height: 0px;
-    width: 0px;
+    transform: translate(46%, -46%) scale(0);
   }
 
   to {
-    height: 600px;
-    width: 600px;
+    transform: translate(46%, -46%) scale(1);
   }
 }
 
