@@ -76,28 +76,20 @@
   margin: 5px;
   flex-grow: 1;
   flex-shrink: 1;
-  flex-basis: auto;
-  /* transform: scale(1);
-  transition-property: transform;
-  transition-duration: var(--transition-duration); */
+  flex-basis: 0;
 }
-
-/* .project-comp .project-item:hover {
-  transform: scale(1.015);
-  cursor: pointer;
-} */
 
 .project-comp .project-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transform: scale(1);
-  transition-property: transform;
+  object-position: top;
+  transition-property: object-position;
   transition-duration: var(--transition-duration);
 }
 
 .project-comp .project-item:hover img {
-  transform: scale(1.15);
+  object-position: center;
 }
 
 .project-comp .project-item .image-container {
