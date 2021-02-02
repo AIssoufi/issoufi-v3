@@ -33,7 +33,6 @@ const Header = () => {
           onClose={() => setMobileMenuIsOpen(false)}
         />
       </div>
-
     </header>
   )
 }

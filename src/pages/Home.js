@@ -3,7 +3,7 @@ import React from 'react';
 import { Link } from "react-router-dom";
 
 // Style
-import './Home.css'
+import './Home.css';
 
 const Home = () => {
 

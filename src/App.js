@@ -1,5 +1,5 @@
 // Dependencies
-import React from 'react';
+import React, { useState } from 'react';
 import {
   BrowserRouter as Router,
   Switch,
@@ -8,6 +8,7 @@ import {
 
 // Shared components
 import Header from 'shared-components/Header';
+import Modal from 'shared-components/Modal';
 
 // Page
 import {
@@ -18,6 +19,12 @@ import {
 import './App.css'
 
 function App() {
+  const [openTemporaryModal, setOpenTemporaryModal ] = useState(true);
+
+  const handleCloseModal = () => {
+    setOpenTemporaryModal(false);
+  };
+
   return (
     <Router>
       <div className="web-app">
@@ -36,6 +43,10 @@ function App() {
             <Home />
           </Route>
         </Switch>
+        <Modal
+          displayModal={openTemporaryModal}
+          onClose={handleCloseModal}
+        />
       </div>
     </Router>
   );
