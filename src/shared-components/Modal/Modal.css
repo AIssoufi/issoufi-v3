@@ -29,6 +29,7 @@
   justify-content: flex-end;
   align-items: center;
 }
+
 #modal-root .container > header button {
   color: white;
   background-color: transparent;
@@ -36,6 +37,7 @@
   border-width: 1px;
   border-style: solid;
   width: max-content;
+  height: max-content;
 }
 
 #modal-root .container > main {
