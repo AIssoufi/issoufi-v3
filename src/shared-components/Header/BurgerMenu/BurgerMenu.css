@@ -1,6 +1,6 @@
 .burger-menu-comp > svg {
-  height: min-content !important;
-  width: min-content !important;
+  height: 50px !important;
+  width: 50px !important;
   position: relative;
   z-index: 1;
 }
