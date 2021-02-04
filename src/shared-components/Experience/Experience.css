@@ -27,7 +27,7 @@
 
 .exp-comp .job-summary .job-name {
   margin: 0;
-  font-size: 17px;
+  font-size: 15px;
   font-weight: 700;
 }
 
@@ -111,4 +111,14 @@
 .exp-comp .exp-project .description {
   font-size: 14px;
   font-weight: 400;
+}
+
+@media (min-width: 50em) {
+  .exp-comp .job-summary .job-name {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 100em) {
+
 }

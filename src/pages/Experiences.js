@@ -55,7 +55,7 @@ const Experiences = () => {
           </Experience.Project>
           <Experience.Project
             title='Projet MyFFBaD'
-            state='Terminé et livré dans les délais'
+            state='Livré dans les délais'
             technologies={[
               'React.js', 'Redux.js', 'Node.js', 'AWS (S3, Lambda, API Gateway, CloudFormation)',
               'Elasticsearch', 'SQL Server', 'Swagger'
@@ -91,7 +91,7 @@ const Experiences = () => {
           </Experience.Project>
           <Experience.Project
             title='Projet DreamNation'
-            state='Terminé et livré dans les délais'
+            state='Livré dans les délais'
             technologies={[ 'React.js', 'Redux.js', 'Angulars.js' ]}
           >
             Au sein d’une équipe de deux développeurs (mon maître de stage et moi), j’ai été chargé de développer la partie front du site dreamnation.fr<br />

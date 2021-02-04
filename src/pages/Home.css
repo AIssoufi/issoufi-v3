@@ -14,12 +14,12 @@
 }
 
 #home-page h1 {
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 500;
 }
 
 #home-page h1 strong{
-  font-size: 36px;
+  font-size: 24px;
   font-weight: 700;
 }
 
@@ -66,4 +66,20 @@
   background-color: var(--tertiary-color);
   border-color: var(--tertiary-color);
   margin-bottom: 20px;
+}
+
+@media (min-width: 50em) {
+  #home-page h1 {
+    font-size: 24px;
+    font-weight: 500;
+  }
+
+  #home-page h1 strong{
+    font-size: 36px;
+    font-weight: 700;
+  }
+}
+
+@media (min-width: 100em) {
+
 }

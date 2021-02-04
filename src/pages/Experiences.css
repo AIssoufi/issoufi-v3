@@ -3,8 +3,18 @@
 }
 
 #experiences-page > header > .title {
-  font-size: 36px;
+  font-size: 24px;
   font-weight: 700;
   margin: 0;
   margin-bottom: 10px;
+}
+
+@media (min-width: 50em) {
+  #experiences-page > header > .title {
+    font-size: 36px;
+  }
+}
+
+@media (min-width: 100em) {
+
 }

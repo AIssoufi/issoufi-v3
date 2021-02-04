@@ -61,8 +61,7 @@ Experience.Technologies = Technologies;
 const Project = ({ title, state, technologies, children }) => (
   <div className="exp-project">
     <header>
-      <h3 className="title">{title}&nbsp;</h3>
-      {state ? <span className="state">· {state}</span> : null}
+      <h3 className="title">{title}&nbsp;{state ? <span className="state">· {state}</span> : null}</h3>
     </header>
     <main className="description">{children}</main>
     {technologies.length > 0 ? <Technologies technologies={technologies} /> : null}
