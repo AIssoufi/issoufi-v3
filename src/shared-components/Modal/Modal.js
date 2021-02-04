@@ -17,7 +17,7 @@ const Modal = ({ displayModal, onClose }) => {
           <button onClick={onClose}>&times;</button>
         </header>
         <main>
-          <p>Ce site est en développement et n'est pas encore optimisé pour les utilisateurs mobile !</p>
+          <p>Ce site est toujours en développement et sera bientôt terminé !</p>
           <button
             type="button"
             onClick={onClose}
