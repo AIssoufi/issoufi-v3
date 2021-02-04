@@ -24,10 +24,18 @@
   margin: 7px;
 }
 
-#modal-root .container > header{
+#modal-root .container > header {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+}
+#modal-root .container > header button {
+  color: white;
+  background-color: transparent;
+  border-radius: 60px;
+  border-width: 1px;
+  border-style: solid;
+  width: max-content;
 }
 
 #modal-root .container > main {
