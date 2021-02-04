@@ -68,6 +68,14 @@
   padding-right: var(--page-padding);
 }
 
+.project-comp > main.display-all .project-item:first-child  {
+  padding-left: 0;
+}
+
+.project-comp > main.display-all .project-item:last-child  {
+  padding-right: 0;
+}
+
 @media (min-width: 50em) {
   .project-comp .title {
     font-size: 36px;
