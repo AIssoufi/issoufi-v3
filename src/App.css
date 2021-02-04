@@ -8,14 +8,16 @@
   height: 100vh;
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 20px;
 }
 
 .web-app > header {
+  padding-left: var(--page-padding);
+  padding-right: var(--page-padding);
   grid-area: header;
 }
 
 .web-app .page {
+  padding: 0 var(--page-padding);
   position: relative;
   grid-area: main;
 }

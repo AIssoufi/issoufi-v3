@@ -20,7 +20,7 @@ const Skill = ({
       </header>
       {(experienceDuration && Number.isInteger(proProjectCount) && Number.isInteger(personalProjectCount)) ? (
         <main className="additional-infos">
-          <div>{experienceDuration ? experienceDuration : 'Pas '} d’expérience professionnelle</div>
+          <div>{experienceDuration ? experienceDuration : 'Pas '} d’expériences professionnelles</div>
           <div>{proProjectCount ? proProjectCount : 'Pas de'} projet{proProjectCount > 1 ? 's' : ''} professionnel{proProjectCount > 1 ? 's' : ''}</div>
           <div>{personalProjectCount ? personalProjectCount : 'Pas de'} projet{personalProjectCount > 1 ? 's' : ''} personnel{personalProjectCount > 1 ? 's' : ''}</div>
         </main>

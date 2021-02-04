@@ -16,6 +16,9 @@
 
   /* Animation */
   --transition-duration: 0.3s;
+
+  /* Page */
+  --page-padding: 20px;
 }
 
 body {

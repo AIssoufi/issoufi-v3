@@ -10,10 +10,12 @@
 
 .project-comp > header {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
   margin-bottom: 10px;
+  padding-left: var(--page-padding);
+  padding-right: var(--page-padding);
 }
 
 .project-comp > main {
@@ -21,6 +23,9 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
+  max-width: 100vw;
+  white-space: nowrap;
+  overflow-x: auto;
 }
 
 .project-comp > main.display-all {
@@ -30,20 +35,8 @@
   row-gap: 5px;
 }
 
-@media (min-width: 50em) {
-  .project-comp > main.display-all {
-    grid-template-columns: repeat(2, minmax(min-content, 1fr));
-  }
-}
-
-@media (min-width: 100em) {
-  .project-comp > main.display-all {
-    grid-template-columns: repeat(3, minmax(min-content, 1fr));
-  }
-}
-
 .project-comp .title {
-  font-size: 36px;
+  font-size: 24px;
   font-weight: 700;
   margin: 0;
   margin-bottom: 10px;
@@ -56,11 +49,59 @@
 }
 
 .project-comp .ctrl-item {
-  margin-left: 10px;
+  margin: 0 10px 0 0;
   border: none;
   color: var(--primary-color);
   background-color: transparent;
   font-size: 18px;
+}
+
+.project-comp .ctrl-item:nth-child(1) {
+  order: 3
+}
+
+.project-comp .project-item:first-child {
+  padding-left: var(--page-padding);
+}
+
+.project-comp .project-item:last-child {
+  padding-right: var(--page-padding);
+}
+
+@media (min-width: 50em) {
+  .project-comp .title {
+    font-size: 36px;
+  }
+
+  .project-comp > header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .project-comp .ctrl-item {
+    margin: 0 0 0 10px;
+  }
+
+  .project-comp .project-item:first-child {
+    padding-left: 0;
+  }
+
+  .project-comp .project-item:last-child {
+    padding-right: 0;
+  }
+
+  .project-comp > main.display-all {
+    grid-template-columns: repeat(2, minmax(min-content, 1fr));
+  }
+}
+
+@media (min-width: 100em) {
+  .project-comp > main.display-all {
+    grid-template-columns: repeat(3, minmax(min-content, 1fr));
+  }
 }
 
 .project-comp .ctrl-item:hover {
@@ -79,7 +120,7 @@
   flex-basis: 0;
 }
 
-.project-comp .project-item img {
+.project-comp .project-item .thumbnail {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -88,7 +129,7 @@
   transition-duration: var(--transition-duration);
 }
 
-.project-comp .project-item:hover img {
+.project-comp .project-item:hover .thumbnail {
   object-position: center;
 }
 
@@ -97,6 +138,16 @@
   border-radius: 10px;
   overflow: hidden;
   position: relative;
+}
+
+.project-comp .project-item .image-container::before {
+  content: '';
+  position: absolute;
+  background: linear-gradient(180deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .project-comp .project-item .like-container {
