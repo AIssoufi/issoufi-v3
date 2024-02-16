@@ -8,7 +8,22 @@ import { ReactComponent as PreviousIcon } from "./icons/previous.svg";
 
 import "./Project.css";
 
-const Project = ({ title, projects }) => {
+interface ProjectItem {
+  id: number;
+  name: string;
+  type: string;
+  imageUrl: string;
+  tools: string[];
+  likeCount: number;
+  isLikedByOwnUser: boolean;
+}
+
+interface ProjectProps {
+  title: string;
+  projects: ProjectItem[];
+}
+
+const Project = ({ title, projects }: ProjectProps) => {
   const [currentPage, setCurrentPage] = useState(0);
   const [displayAllPages, setDisplayAllPages] = useState(false);
   const step = 3;

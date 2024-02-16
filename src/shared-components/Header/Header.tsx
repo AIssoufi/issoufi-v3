@@ -11,7 +11,11 @@ const items = [
   { name: "Compétences", url: "/skills" },
 ];
 
-const Header = ({ testId }) => {
+interface HeaderProps {
+  testId?: string;
+}
+
+const Header = ({ testId }: HeaderProps) => {
   const [mobileMenuIsOpen, setMobileMenuIsOpen] = useState(false);
 
   return (

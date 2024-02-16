@@ -1,10 +1,7 @@
 import { useState } from "react";
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
-
-import Header from "shared-components/Header";
-import Modal from "shared-components/Modal";
-
 import { Experiences, Home, Projects, Skills } from "./pages";
+import { Header, Modal } from "./shared-components";
 
 import "./App.css";
 

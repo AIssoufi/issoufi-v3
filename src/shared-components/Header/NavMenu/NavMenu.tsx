@@ -4,7 +4,18 @@ import "./NavMenu.css";
 
 import { ReactComponent as DownloadIcon } from "./icons/download.svg";
 
-const NavMenu = ({ items, onClick, mobileMenuIsOpen }) => {
+interface Item {
+  name: string;
+  url: string;
+}
+
+interface NavMenuProps {
+  items: Item[];
+  mobileMenuIsOpen: boolean;
+  onClick: () => void;
+}
+
+const NavMenu = ({ items, onClick, mobileMenuIsOpen }: NavMenuProps) => {
   return (
     <nav
       className={`nav-menu-comp ${

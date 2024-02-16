@@ -2,6 +2,15 @@ import PropTypes from "prop-types";
 
 import "./Skill.css";
 
+interface SkillProps {
+  name: string;
+  experienceDuration?: string;
+  proProjectCount?: number;
+  personalProjectCount?: number;
+  tools: string[];
+  valuationValue?: number;
+}
+
 const Skill = ({
   name,
   experienceDuration,
@@ -9,14 +18,18 @@ const Skill = ({
   personalProjectCount,
   tools,
   valuationValue,
-}) => {
+}: SkillProps) => {
   return (
     <div className="skill-comp">
       <header>
         <h3 className="name">{name}</h3>
         <div className="valuation">
           {[1, 2, 3, 4, 5].map((index) => (
-            <span className={index <= valuationValue ? "fill" : ""}>
+            <span
+              className={
+                valuationValue && index <= valuationValue ? "fill" : ""
+              }
+            >
               &#9733;
             </span>
           ))}
@@ -32,13 +45,14 @@ const Skill = ({
           </div>
           <div>
             {proProjectCount ? proProjectCount : "Pas de"} projet
-            {proProjectCount > 1 ? "s" : ""} professionnel
-            {proProjectCount > 1 ? "s" : ""}
+            {proProjectCount && proProjectCount > 1 ? "s" : ""} professionnel
+            {proProjectCount && proProjectCount > 1 ? "s" : ""}
           </div>
           <div>
             {personalProjectCount ? personalProjectCount : "Pas de"} projet
-            {personalProjectCount > 1 ? "s" : ""} personnel
-            {personalProjectCount > 1 ? "s" : ""}
+            {personalProjectCount && personalProjectCount > 1 ? "s" : ""}{" "}
+            personnel
+            {personalProjectCount && personalProjectCount > 1 ? "s" : ""}
           </div>
         </main>
       ) : null}
@@ -55,7 +69,7 @@ Skill.propTypes = {
   proProjectCount: PropTypes.number,
   personalProjectCount: PropTypes.number,
   tools: PropTypes.arrayOf(PropTypes.string),
-  valuationValue: PropTypes.string,
+  valuationValue: PropTypes.number,
 };
 
 Skill.defaultProps = {

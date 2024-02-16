@@ -5,6 +5,18 @@ import "./Experience.css";
 import Project from "./Project";
 import Technologies from "./Technologies";
 
+interface ExperienceProps {
+  jobName: string;
+  entityName: string;
+  entityLogoUrl: string;
+  contratType: string;
+  city: string;
+  startDate: string;
+  endDate: string;
+  duration: string;
+  children: React.ReactNode;
+}
+
 const Experience = ({
   jobName,
   entityName,
@@ -15,7 +27,7 @@ const Experience = ({
   endDate,
   duration,
   children,
-}) => {
+}: ExperienceProps) => {
   return (
     <article className="exp-comp">
       <header className="summary">

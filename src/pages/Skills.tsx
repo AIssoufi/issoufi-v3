@@ -1,4 +1,4 @@
-import Skill from "shared-components/Skill";
+import { Skill } from "../shared-components";
 
 import "./Skills.css";
 

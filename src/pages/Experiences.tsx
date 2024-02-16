@@ -1,4 +1,4 @@
-import Experience from "shared-components/Experience";
+import { Experience } from "../shared-components";
 
 import "./Experiences.css";
 

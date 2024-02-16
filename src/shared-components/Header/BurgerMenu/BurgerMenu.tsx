@@ -6,13 +6,19 @@ import "./BurgerMenu.css";
 
 import burgerMenuData from "./burger-menu.json";
 
-const BurgerMenu = ({ isOpen, onOpen, onClose }) => {
-  const menuBurgerEl = useRef(null);
-  const lottieRef = useRef(null);
+interface BurgerMenuProps {
+  isOpen: boolean;
+  onOpen: () => void;
+  onClose: () => void;
+}
+
+const BurgerMenu = ({ isOpen, onOpen, onClose }: BurgerMenuProps) => {
+  const menuBurgerEl = useRef<any>(null);
+  const lottieRef = useRef<any>(null);
 
   useEffect(() => {
     const lottieInstance = Lottie.loadAnimation({
-      container: menuBurgerEl.current,
+      container: menuBurgerEl.current as Element,
       renderer: "svg",
       loop: false,
       autoplay: false,

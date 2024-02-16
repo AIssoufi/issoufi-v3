@@ -1,7 +1,14 @@
 import PropTypes from "prop-types";
 import Technologies from "../Technologies";
 
-const Project = ({ title, state, technologies, children }) => (
+interface ProjectProps {
+  title: string;
+  state?: string;
+  technologies: string[];
+  children: React.ReactNode;
+}
+
+const Project = ({ title, state, technologies, children }: ProjectProps) => (
   <div className="exp-project">
     <header>
       <h3 className="title">

@@ -1,11 +1,16 @@
 import PropTypes from "prop-types";
-import ReactDOM from "react-dom";
+import { createPortal } from "react-dom";
 
 import "./Modal.css";
 
-const Modal = ({ displayModal, onClose }) => {
+interface ModalProps {
+  displayModal: boolean;
+  onClose: () => void;
+}
+
+const Modal = ({ displayModal, onClose }: ModalProps) => {
   if (!displayModal) return null;
-  return ReactDOM.createPortal(
+  return createPortal(
     <div className="modal-comp">
       <div className="container">
         <header>
@@ -19,7 +24,7 @@ const Modal = ({ displayModal, onClose }) => {
         </main>
       </div>
     </div>,
-    document.getElementById("modal-root")
+    document.getElementById("modal-root") as Element
   );
 };
 

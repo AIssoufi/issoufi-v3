@@ -1,4 +1,4 @@
-import Project from "shared-components/Project";
+import { Project } from "../shared-components";
 
 import "./Projects.css";
 
