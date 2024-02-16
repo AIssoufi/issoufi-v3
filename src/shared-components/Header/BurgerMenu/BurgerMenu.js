@@ -1,65 +1,52 @@
-// Dependencies
-import React, { useState, useEffect, useRef } from 'react';
-import PropTypes from 'prop-types';
-import Lottie from 'lottie-web';
+import Lottie from "lottie-web";
+import PropTypes from "prop-types";
+import { useEffect, useRef } from "react";
 
-// Styles
-import './BurgerMenu.css';
+import "./BurgerMenu.css";
 
-// JSON
-import burgerMenuData from './burger-menu.json';
-
+import burgerMenuData from "./burger-menu.json";
 
 const BurgerMenu = ({ isOpen, onOpen, onClose }) => {
   const menuBurgerEl = useRef(null);
-  const [lottieInstance, setLottieInstance] = useState(null);
+  const lottieRef = useRef(null);
 
   useEffect(() => {
-    if (menuBurgerEl.current) {
-      setLottieInstance(Lottie.loadAnimation({
-        container: menuBurgerEl.current,
-        renderer: 'svg',
-        loop: false,
-        autoplay: false,
-        animationData: burgerMenuData
-      }));
+    const lottieInstance = Lottie.loadAnimation({
+      container: menuBurgerEl.current,
+      renderer: "svg",
+      loop: false,
+      autoplay: false,
+      animationData: burgerMenuData,
+    });
 
-      return () => {
-        if (lottieInstance) {
-          lottieInstance.destroy();
-        }
-      }
-    }
-  }, [menuBurgerEl]);
+    lottieRef.current = lottieInstance;
 
-  useEffect(() => {
-    if (lottieInstance) {
-      if (isOpen) {
-        lottieInstance.setSpeed(1.5);
-        lottieInstance.setDirection(1);
-      } else {
-        lottieInstance.setSpeed(4);
-        lottieInstance.setDirection(-1);
-      }
-      lottieInstance.play();
-    }
-  }, [isOpen]);
+    return () => {
+      lottieInstance?.destroy?.();
+    };
+  }, []);
 
   const handleBurgerMenuClick = () => {
+    const lottieInstance = lottieRef.current;
     if (isOpen) {
       onClose();
+      lottieInstance.setSpeed(4);
+      lottieInstance.setDirection(-1);
     } else {
       onOpen();
+      lottieInstance.setSpeed(1.5);
+      lottieInstance.setDirection(1);
     }
+    lottieInstance.play();
   };
 
   return (
     <div
-      className={`burger-menu-comp ${isOpen ? 'is-open' : ''}`}
+      className={`burger-menu-comp ${isOpen ? "is-open" : ""}`}
       ref={menuBurgerEl}
       onClick={handleBurgerMenuClick}
     />
-  )
+  );
 };
 
 BurgerMenu.propTypes = {
