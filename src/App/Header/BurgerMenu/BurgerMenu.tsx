@@ -1,10 +1,10 @@
-import Lottie from "lottie-web";
-import PropTypes from "prop-types";
-import { useEffect, useRef } from "react";
+import Lottie from 'lottie-web';
+import PropTypes from 'prop-types';
+import { useEffect, useRef } from 'react';
 
-import "./BurgerMenu.css";
+import './BurgerMenu.css';
 
-import burgerMenuData from "./burger-menu.json";
+import burgerMenuData from './burger-menu.json';
 
 interface BurgerMenuProps {
   isOpen: boolean;
@@ -19,7 +19,7 @@ const BurgerMenu = ({ isOpen, onOpen, onClose }: BurgerMenuProps) => {
   useEffect(() => {
     const lottieInstance = Lottie.loadAnimation({
       container: menuBurgerEl.current as Element,
-      renderer: "svg",
+      renderer: 'svg',
       loop: false,
       autoplay: false,
       animationData: burgerMenuData,
@@ -48,7 +48,7 @@ const BurgerMenu = ({ isOpen, onOpen, onClose }: BurgerMenuProps) => {
 
   return (
     <div
-      className={`burger-menu-comp ${isOpen ? "is-open" : ""}`}
+      className={`burger-menu-comp ${isOpen ? 'is-open' : ''}`}
       ref={menuBurgerEl}
       onClick={handleBurgerMenuClick}
     />

@@ -1,10 +1,9 @@
 :root {
-
   /* color */
-  --primary-color: #FFF;
-  --secondary-color: #E5E5E5;
-  --secpndary-dark-color: #C4C4C4;
-  --tertiary-color: #802D5E;
+  --primary-color: #fff;
+  --secondary-color: #e5e5e5;
+  --secpndary-dark-color: #c4c4c4;
+  --tertiary-color: #802d5e;
   --transparent-bg-color: rgba(229, 229, 229, 0.12);
 
   /* Border */
@@ -23,8 +22,18 @@
 
 body {
   margin: 0;
-  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family:
+    'Montserrat',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    'Roboto',
+    'Oxygen',
+    'Ubuntu',
+    'Cantarell',
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -36,8 +45,7 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
 ul {

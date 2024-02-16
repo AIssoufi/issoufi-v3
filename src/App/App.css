@@ -1,8 +1,8 @@
 .web-app {
   display: grid;
   grid-template-areas:
-      "header"
-      "main";
+    'header'
+    'main';
   grid-template-rows: max-content 1fr;
   grid-template-columns: 1fr;
   height: 100vh;

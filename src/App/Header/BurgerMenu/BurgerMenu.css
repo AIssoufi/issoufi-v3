@@ -14,7 +14,7 @@
 }
 
 .burger-menu-comp.is-open::before {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   right: 0;
@@ -30,7 +30,7 @@
 }
 
 .burger-menu-comp.is-open::after {
-  content: "";
+  content: '';
   display: block;
   position: fixed;
   bottom: 0;

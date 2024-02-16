@@ -1,7 +1,7 @@
-import PropTypes from "prop-types";
-import { createPortal } from "react-dom";
+import PropTypes from 'prop-types';
+import { createPortal } from 'react-dom';
 
-import "./Modal.css";
+import './Modal.css';
 
 interface ModalProps {
   displayModal: boolean;
@@ -18,13 +18,16 @@ const Modal = ({ displayModal, onClose }: ModalProps) => {
         </header>
         <main>
           <p>Ce site est toujours en développement et sera bientôt terminé !</p>
-          <button type="button" onClick={onClose}>
+          <button
+            type="button"
+            onClick={onClose}
+          >
             J'ai compris
           </button>
         </main>
       </div>
     </div>,
-    document.getElementById("modal-root") as Element
+    document.getElementById('modal-root') as Element,
   );
 };
 

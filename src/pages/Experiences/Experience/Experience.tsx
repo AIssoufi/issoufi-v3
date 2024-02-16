@@ -1,9 +1,9 @@
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
-import "./Experience.css";
+import './Experience.css';
 
-import Project from "./Project";
-import Technologies from "./Technologies";
+import Project from './Project';
+import Technologies from './Technologies';
 
 interface ExperienceProps {
   jobName: string;
@@ -31,7 +31,11 @@ const Experience = ({
   return (
     <article className="exp-comp">
       <header className="summary">
-        <img className="entity-logo" src={entityLogoUrl} alt={entityName} />
+        <img
+          className="entity-logo"
+          src={entityLogoUrl}
+          alt={entityName}
+        />
         <div className="job-summary">
           <h2 className="job-name">{jobName}</h2>
           <div className="job-details">{`${entityName} · ${contratType} · ${city}`}</div>
@@ -44,10 +48,7 @@ const Experience = ({
 };
 
 Experience.propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.element,
-    PropTypes.arrayOf(PropTypes.element),
-  ]),
+  children: PropTypes.oneOfType([PropTypes.element, PropTypes.arrayOf(PropTypes.element)]),
   jobName: PropTypes.string,
   entityName: PropTypes.string,
   entityLogoUrl: PropTypes.string,

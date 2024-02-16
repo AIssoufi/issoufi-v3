@@ -1,29 +1,20 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
-import "./Header.css";
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
-import BurgerMenu from "./BurgerMenu";
-import NavMenu from "./NavMenu";
+import BurgerMenu from './BurgerMenu';
+import NavMenu from './NavMenu';
 
-const items = [
-  { name: "Projets", url: "/projects" },
-  { name: "Expériences", url: "/experiences" },
-  { name: "Compétences", url: "/skills" },
-];
-
-interface HeaderProps {
-  testId?: string;
-}
+import { Container, Logo, Menu } from './Header.styled';
 
 const Header = ({ testId }: HeaderProps) => {
   const [mobileMenuIsOpen, setMobileMenuIsOpen] = useState(false);
 
   return (
-    <header className="header-comp" data-testid={testId}>
-      <div className="logo">
+    <Container data-testid={testId}>
+      <Logo>
         <Link to="/">AI</Link>
-      </div>
-      <div className={`menu ${mobileMenuIsOpen ? "is-stiky" : ""}`}>
+      </Logo>
+      <Menu isSticky={mobileMenuIsOpen}>
         <NavMenu
           items={items}
           mobileMenuIsOpen={mobileMenuIsOpen}
@@ -34,9 +25,19 @@ const Header = ({ testId }: HeaderProps) => {
           onOpen={() => setMobileMenuIsOpen(true)}
           onClose={() => setMobileMenuIsOpen(false)}
         />
-      </div>
-    </header>
+      </Menu>
+    </Container>
   );
 };
 
 export default Header;
+
+interface HeaderProps {
+  testId?: string;
+}
+
+const items = [
+  { name: 'Projets', url: '/projects' },
+  { name: 'Expériences', url: '/experiences' },
+  { name: 'Compétences', url: '/skills' },
+];

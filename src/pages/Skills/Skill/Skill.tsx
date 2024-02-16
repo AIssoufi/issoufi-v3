@@ -1,6 +1,6 @@
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
-import "./Skill.css";
+import './Skill.css';
 
 interface SkillProps {
   name: string;
@@ -24,14 +24,8 @@ const Skill = ({
       <header>
         <h3 className="name">{name}</h3>
         <div className="valuation">
-          {[1, 2, 3, 4, 5].map((index) => (
-            <span
-              className={
-                valuationValue && index <= valuationValue ? "fill" : ""
-              }
-            >
-              &#9733;
-            </span>
+          {[1, 2, 3, 4, 5].map(index => (
+            <span className={valuationValue && index <= valuationValue ? 'fill' : ''}>&#9733;</span>
           ))}
         </div>
       </header>
@@ -40,25 +34,21 @@ const Skill = ({
       Number.isInteger(personalProjectCount) ? (
         <main className="additional-infos">
           <div>
-            {experienceDuration ? experienceDuration : "Pas "} d’expériences
-            professionnelles
+            {experienceDuration ? experienceDuration : 'Pas '} d’expériences professionnelles
           </div>
           <div>
-            {proProjectCount ? proProjectCount : "Pas de"} projet
-            {proProjectCount && proProjectCount > 1 ? "s" : ""} professionnel
-            {proProjectCount && proProjectCount > 1 ? "s" : ""}
+            {proProjectCount ? proProjectCount : 'Pas de'} projet
+            {proProjectCount && proProjectCount > 1 ? 's' : ''} professionnel
+            {proProjectCount && proProjectCount > 1 ? 's' : ''}
           </div>
           <div>
-            {personalProjectCount ? personalProjectCount : "Pas de"} projet
-            {personalProjectCount && personalProjectCount > 1 ? "s" : ""}{" "}
-            personnel
-            {personalProjectCount && personalProjectCount > 1 ? "s" : ""}
+            {personalProjectCount ? personalProjectCount : 'Pas de'} projet
+            {personalProjectCount && personalProjectCount > 1 ? 's' : ''} personnel
+            {personalProjectCount && personalProjectCount > 1 ? 's' : ''}
           </div>
         </main>
       ) : null}
-      {tools.length > 0 ? (
-        <footer className="tools">{tools.join(", ")}</footer>
-      ) : null}
+      {tools.length > 0 ? <footer className="tools">{tools.join(', ')}</footer> : null}
     </div>
   );
 };

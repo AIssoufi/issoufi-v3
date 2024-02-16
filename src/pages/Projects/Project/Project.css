@@ -57,7 +57,7 @@
 }
 
 .project-comp .ctrl-item:nth-child(1) {
-  order: 3
+  order: 3;
 }
 
 .project-comp .project-item:first-child {
@@ -68,11 +68,11 @@
   padding-right: var(--page-padding);
 }
 
-.project-comp > main.display-all .project-item:first-child  {
+.project-comp > main.display-all .project-item:first-child {
   padding-left: 0;
 }
 
-.project-comp > main.display-all .project-item:last-child  {
+.project-comp > main.display-all .project-item:last-child {
   padding-right: 0;
 }
 
@@ -115,7 +115,7 @@
 .project-comp .project-item .image-container::before {
   content: '';
   position: absolute;
-  background: linear-gradient(180deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
   top: 0;
   bottom: 0;
   left: 0;

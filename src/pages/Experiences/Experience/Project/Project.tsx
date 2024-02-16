@@ -1,14 +1,6 @@
-import PropTypes from "prop-types";
-import Technologies from "../Technologies";
+import Technologies from '../Technologies';
 
-interface ProjectProps {
-  title: string;
-  state?: string;
-  technologies: string[];
-  children: React.ReactNode;
-}
-
-const Project = ({ title, state, technologies, children }: ProjectProps) => (
+const Project = ({ title, state, technologies = [], children }: ProjectProps) => (
   <div className="exp-project">
     <header>
       <h3 className="title">
@@ -16,26 +8,15 @@ const Project = ({ title, state, technologies, children }: ProjectProps) => (
       </h3>
     </header>
     <main className="description">{children}</main>
-    {technologies.length > 0 ? (
-      <Technologies technologies={technologies} />
-    ) : null}
+    {technologies.length > 0 ? <Technologies technologies={technologies} /> : null}
   </div>
 );
 
-Project.propTypes = {
-  title: PropTypes.string,
-  state: PropTypes.string,
-  technologies: PropTypes.arrayOf(PropTypes.string),
-  children: PropTypes.oneOfType([
-    PropTypes.element,
-    PropTypes.arrayOf(PropTypes.element),
-  ]),
-};
-
-Project.defaultProps = {
-  title: undefined,
-  technologies: [],
-  state: "",
-};
-
 export default Project;
+
+interface ProjectProps {
+  title: string;
+  state?: string;
+  technologies?: string[];
+  children?: React.ReactNode;
+}

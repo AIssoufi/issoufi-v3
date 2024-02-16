@@ -5,7 +5,7 @@
       "name": "Jeu d'echec",
       "type": "Application web",
       "imageUrl": "https://firebasestorage.googleapis.com/v0/b/issoufi-v3.appspot.com/o/projects%2Fchess.png?alt=media&token=268fdfcc-db84-4557-a698-cb821a385fb0",
-      "tools": [ "HTML 5", "CSS 3", "JavaScript", "Gulp", "Mocha", "Babel" ],
+      "tools": ["HTML 5", "CSS 3", "JavaScript", "Gulp", "Mocha", "Babel"],
       "likeCount": 2,
       "isLikedByOwnUser": true
     },
@@ -14,7 +14,7 @@
       "name": "Magasin de plugins audio",
       "type": "Application web",
       "imageUrl": "https://firebasestorage.googleapis.com/v0/b/issoufi-v3.appspot.com/o/projects%2Fpedalboards.png?alt=media&token=a399a803-8633-4a06-8dc9-a0de2b150168",
-      "tools": [ "HTML 5", "SCSS", "React.js", "Redux.js" ],
+      "tools": ["HTML 5", "SCSS", "React.js", "Redux.js"],
       "likeCount": 0,
       "isLikedByOwnUser": false
     },
@@ -23,7 +23,7 @@
       "name": "Puissance 4",
       "type": "Application web",
       "imageUrl": "https://firebasestorage.googleapis.com/v0/b/issoufi-v3.appspot.com/o/projects%2Fconnect-four.png?alt=media&token=a0a7c157-42bb-407d-bfed-24cbfba38ef6",
-      "tools": [ "HTML 5", "CSS 3", "Express", "Swagger" ],
+      "tools": ["HTML 5", "CSS 3", "Express", "Swagger"],
       "likeCount": 1,
       "isLikedByOwnUser": false
     },
@@ -32,7 +32,7 @@
       "name": "Calculatrice",
       "type": "Application web",
       "imageUrl": "https://firebasestorage.googleapis.com/v0/b/issoufi-v3.appspot.com/o/projects%2Fcalculatrice.png?alt=media&token=1f82a9c3-0308-4ac3-9f26-43246a5b9ea6",
-      "tools": [ "HTML 5", "CSS 3", "React.js", "Redux.js" ],
+      "tools": ["HTML 5", "CSS 3", "React.js", "Redux.js"],
       "likeCount": 0,
       "isLikedByOwnUser": false
     }
