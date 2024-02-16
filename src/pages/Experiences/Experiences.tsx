@@ -1,8 +1,8 @@
-import { Experience } from "../shared-components";
+import Experience from "./Experience";
 
 import "./Experiences.css";
 
-const Experiences = () => {
+export const Experiences = () => {
   return (
     <section id="experiences-page" className="page">
       <header>
@@ -134,5 +134,3 @@ const Experiences = () => {
     </section>
   );
 };
-
-export default Experiences;

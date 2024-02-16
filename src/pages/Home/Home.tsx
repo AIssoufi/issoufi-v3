@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 import "./Home.css";
 
-const Home = () => {
+export const Home = () => {
   return (
     <section id="home-page" className="page">
       <main>
@@ -24,5 +24,3 @@ const Home = () => {
     </section>
   );
 };
-
-export default Home;

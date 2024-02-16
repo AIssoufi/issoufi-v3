@@ -1,8 +1,8 @@
-import { Skill } from "../shared-components";
+import Skill from "./Skill";
 
 import "./Skills.css";
 
-const Skills = () => {
+export const Skills = () => {
   return (
     <section id="skills-page" className="page">
       <section className="skill-section">
@@ -75,5 +75,3 @@ const Skills = () => {
     </section>
   );
 };
-
-export default Skills;

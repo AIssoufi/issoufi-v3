@@ -1,11 +1,11 @@
-import { Project } from "../shared-components";
+import Project from "./Project";
 
 import "./Projects.css";
 
-import freelanceProjectsData from "./data/freelance-projects.json";
-import personnalProjectsData from "./data/personnal-projects.json";
+import freelanceProjectsData from "./.data/freelance-projects.json";
+import personnalProjectsData from "./.data/personnal-projects.json";
 
-const Projects = () => {
+export const Projects = () => {
   return (
     <section id="projects-page" className="page">
       <Project
@@ -19,5 +19,3 @@ const Projects = () => {
     </section>
   );
 };
-
-export default Projects;
