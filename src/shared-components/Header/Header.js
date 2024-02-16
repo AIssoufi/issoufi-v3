@@ -1,11 +1,7 @@
-// Dependencies
 import { useState } from "react";
 import { Link } from "react-router-dom";
-
-// Styles
 import "./Header.css";
 
-// Child components
 import BurgerMenu from "./BurgerMenu";
 import NavMenu from "./NavMenu";
 

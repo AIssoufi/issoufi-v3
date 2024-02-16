@@ -1,24 +1,29 @@
-// Dependencies
-import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
-// Style
-import './Experience.css';
+import "./Experience.css";
+
+import Project from "./Project";
+import Technologies from "./Technologies";
 
 const Experience = ({
-  jobName, entityName, entityLogoUrl, contratType, city, startDate, endDate, duration, children
+  jobName,
+  entityName,
+  entityLogoUrl,
+  contratType,
+  city,
+  startDate,
+  endDate,
+  duration,
+  children,
 }) => {
   return (
     <article className="exp-comp">
       <header className="summary">
-        <img
-          className="entity-logo" src={entityLogoUrl}
-          alt={entityName}
-        />
+        <img className="entity-logo" src={entityLogoUrl} alt={entityName} />
         <div className="job-summary">
-          <h2 className='job-name'>{jobName}</h2>
-          <div className='job-details'>{`${entityName} · ${contratType} · ${city}`}</div>
-          <div className='job-duration'>{`${startDate} – ${endDate} · ${duration}`}</div>
+          <h2 className="job-name">{jobName}</h2>
+          <div className="job-details">{`${entityName} · ${contratType} · ${city}`}</div>
+          <div className="job-duration">{`${startDate} – ${endDate} · ${duration}`}</div>
         </div>
       </header>
       <main className="details">{children}</main>
@@ -29,7 +34,7 @@ const Experience = ({
 Experience.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.element,
-    PropTypes.arrayOf(PropTypes.element)
+    PropTypes.arrayOf(PropTypes.element),
   ]),
   jobName: PropTypes.string,
   entityName: PropTypes.string,
@@ -38,51 +43,22 @@ Experience.propTypes = {
   city: PropTypes.string,
   startDate: PropTypes.string,
   endDate: PropTypes.string,
-  duration: PropTypes.string
+  duration: PropTypes.string,
 };
 
-const Technologies = ({ technologies }) => (
-  <footer className="exp-technologies">
-    <div className='title'>Technologies que j’utilise</div>
-    {technologies.slice(0, technologies.length - 1).join(', ')} et {technologies[technologies.length - 1]}
-  </footer>
-);
-
-Technologies.propTypes = {
-  technologies: PropTypes.arrayOf(PropTypes.string)
-};
-
-Technologies.defaultProps = {
-  technologies: []
+Experience.defaultProps = {
+  children: undefined,
+  jobName: undefined,
+  entityName: undefined,
+  entityLogoUrl: undefined,
+  contratType: undefined,
+  city: undefined,
+  startDate: undefined,
+  endDate: undefined,
+  duration: undefined,
 };
 
 Experience.Technologies = Technologies;
-
-const Project = ({ title, state, technologies, children }) => (
-  <div className="exp-project">
-    <header>
-      <h3 className="title">{title}&nbsp;{state ? <span className="state">· {state}</span> : null}</h3>
-    </header>
-    <main className="description">{children}</main>
-    {technologies.length > 0 ? <Technologies technologies={technologies} /> : null}
-  </div>
-);
-
-Project.propTypes = {
-  title: PropTypes.string.isRequired,
-  state: PropTypes.string,
-  technologies: PropTypes.arrayOf(PropTypes.string),
-  children: PropTypes.oneOfType([
-    PropTypes.element,
-    PropTypes.arrayOf(PropTypes.element)
-  ])
-};
-
-Project.defaultProps = {
-  technologies: [],
-  state: ''
-};
-
 Experience.Project = Project;
 
 export default Experience;

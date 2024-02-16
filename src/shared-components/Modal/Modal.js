@@ -1,8 +1,6 @@
-// Dependencies
 import PropTypes from "prop-types";
 import ReactDOM from "react-dom";
 
-// Style
 import "./Modal.css";
 
 const Modal = ({ displayModal, onClose }) => {

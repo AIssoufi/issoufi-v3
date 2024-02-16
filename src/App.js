@@ -1,15 +1,11 @@
-// Dependencies
 import { useState } from "react";
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 
-// Shared components
 import Header from "shared-components/Header";
 import Modal from "shared-components/Modal";
 
-// Page
 import { Experiences, Home, Projects, Skills } from "./pages";
 
-// Style
 import "./App.css";
 
 function App() {

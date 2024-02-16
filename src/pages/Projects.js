@@ -1,18 +1,11 @@
-// Dependencies
-import React from 'react';
+import Project from "shared-components/Project";
 
-// Shared components
-import Project from 'shared-components/Project'
+import "./Projects.css";
 
-// Style
-import './Projects.css';
-
-// Data
-import freelanceProjectsData  from './data/freelance-projects.json';
-import personnalProjectsData  from './data/personnal-projects.json';
+import freelanceProjectsData from "./data/freelance-projects.json";
+import personnalProjectsData from "./data/personnal-projects.json";
 
 const Projects = () => {
-
   return (
     <section id="projects-page" className="page">
       <Project
@@ -24,7 +17,7 @@ const Projects = () => {
         projects={freelanceProjectsData.projects}
       />
     </section>
-  )
+  );
 };
 
 export default Projects;

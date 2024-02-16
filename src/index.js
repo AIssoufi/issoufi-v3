@@ -1,11 +1,7 @@
-// Dependencies
 import React from "react";
 import ReactDOM from "react-dom";
-
-// Styles
 import "./index.css";
 
-// Compoenents
 import App from "./App";
 
 ReactDOM.render(
