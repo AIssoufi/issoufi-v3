@@ -1,27 +1,29 @@
 // Dependencies
-import React, { useState } from 'react';
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 // Styles
-import './Header.css';
+import "./Header.css";
 
 // Child components
-import NavMenu from './NavMenu';
-import BurgerMenu from './BurgerMenu';
+import BurgerMenu from "./BurgerMenu";
+import NavMenu from "./NavMenu";
 
 const items = [
-  { name: 'Projets', url: '/projects' },
-  { name: 'Expériences', url: '/experiences' },
-  { name: 'Compétences', url: '/skills' }
+  { name: "Projets", url: "/projects" },
+  { name: "Expériences", url: "/experiences" },
+  { name: "Compétences", url: "/skills" },
 ];
 
-const Header = () => {
+const Header = ({ testId }) => {
   const [mobileMenuIsOpen, setMobileMenuIsOpen] = useState(false);
 
   return (
-    <header className="header-comp">
-      <div className="logo"><Link to="/">AI</Link></div>
-      <div className={`menu ${mobileMenuIsOpen ? 'is-stiky' : ''}`}>
+    <header className="header-comp" data-testid={testId}>
+      <div className="logo">
+        <Link to="/">AI</Link>
+      </div>
+      <div className={`menu ${mobileMenuIsOpen ? "is-stiky" : ""}`}>
         <NavMenu
           items={items}
           mobileMenuIsOpen={mobileMenuIsOpen}
@@ -34,7 +36,7 @@ const Header = () => {
         />
       </div>
     </header>
-  )
-}
+  );
+};
 
 export default Header;
