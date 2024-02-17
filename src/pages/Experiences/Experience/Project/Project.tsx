@@ -1,15 +1,17 @@
 import Technologies from '../Technologies';
 
+import { Container, Descriptiopn, Header, State, Title } from './Project.styled';
+
 const Project = ({ title, state, technologies = [], children }: ProjectProps) => (
-  <div className="exp-project">
-    <header>
-      <h3 className="title">
-        {title}&nbsp;{state ? <span className="state">· {state}</span> : null}
-      </h3>
-    </header>
-    <main className="description">{children}</main>
-    {technologies.length > 0 ? <Technologies technologies={technologies} /> : null}
-  </div>
+  <Container>
+    <Header>
+      <Title>
+        {title}&nbsp;{state && <State>· {state}</State>}
+      </Title>
+    </Header>
+    <Descriptiopn>{children}</Descriptiopn>
+    {technologies.length > 0 && <Technologies technologies={technologies} />}
+  </Container>
 );
 
 export default Project;
